@@ -10,4 +10,10 @@
     color: white;
     padding: 0.8rem 1.2rem;
     cursor: pointer;
+      &:hover {
+        background-color: #286A98;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+        transition: 0.5s;
+    }
 }
