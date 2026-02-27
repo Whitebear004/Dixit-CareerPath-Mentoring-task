@@ -12,20 +12,29 @@ a {
   text-decoration: none;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background-color: rgb(220, 15, 15);
+button {
+  border: none;
+  background: none;
 }
 
 html {
   font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: rgb(220, 15, 15);
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(220, 15, 15);
+  box-sizing: border-box;
 }
 
 .review {
@@ -33,24 +42,33 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2.4rem;
+  margin: 0 2.4rem;
 }
+
+.card-wrapper {
+  gap: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .customer-review {
-  width: 26.2rem;
-  background-color: white;
-  gap: 16px;
+  width: 28.2rem;
+  background-color: rgb(255, 255, 255);
   padding: 2.5rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.6rem;
   padding: 21px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .review-heading {
-  font-family: "Poppins", sans-serif;
+  gap: 1.3rem;
 }
 .review-heading h3 {
   font-size: 2.8rem;
@@ -69,24 +87,115 @@ body {
   align-items: center;
   gap: 1.6rem;
 }
+.user-info img {
+  width: 4.6rem;
+  height: 4.6rem;
+}
 .user-info .name-job {
   display: flex;
   flex-direction: column;
 }
 .user-info .name {
-  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
 }
 .user-info .job {
-  font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
 
 .main-review {
-  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #1a1a1a;
   text-align: center;
-  margin: 0;
+}
+
+.button {
+  background-color: #052A44;
+  border-radius: 0.8rem;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #286A98;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.button {
+  margin-top: 2.6rem;
+  display: block;
+}
+
+.arrows {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 10rem;
+  }
+  .customer-review {
+    width: 40rem;
+    height: 23rem;
+  }
+  .review-heading h3 {
+    font-size: 4.2rem;
+    font-weight: 600;
+    color: #183B56;
+    text-align: center;
+  }
+  .review-heading p {
+    color: #5A7184;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .user-info img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .user-info .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .user-info .job {
+    font-size: 1.4rem;
+  }
+  .main-review {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    text-align: center;
+  }
+  .button {
+    display: none;
+  }
+  .arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 6rem;
+  }
+  .arrows .arrow {
+    background-color: #052A44;
+    border-radius: 0.8rem;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+  }
+  .arrows .arrow:hover {
+    background-color: #286A98;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+  .arrows .arrow-left {
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=main.css.map */
