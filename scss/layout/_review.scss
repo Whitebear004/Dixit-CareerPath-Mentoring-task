@@ -1,6 +1,6 @@
-@use '../base/base';
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@import '../base/base';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
 
 .review-heading {
     font-family: "Poppins", sans-serif;
