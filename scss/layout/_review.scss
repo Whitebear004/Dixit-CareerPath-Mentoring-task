@@ -2,8 +2,29 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.customer-review {
+    width: 26.2rem;
+    background-color: rgb(255, 255, 255);
+    gap: 16px;
+    padding: 2.5rem;
+    border-radius: 10px;
+    @include flex-center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 21px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .review-heading {
-    font-family: "Poppins", sans-serif;
      h3 {
         font-size: 2.8rem;
         color: $text-color-blue;
@@ -18,11 +39,38 @@
 
 .user-info {
     @include flex-center;
-    gap: 16px;
+    gap: 1.6rem;
       .name-job {
         display: flex;
         flex-direction: column;
-
+      }
+      .name {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .job {
+        font-size: 1rem;
       }
 }
+
+.main-review {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0;
+}
+
+.button {
+    // @include buttons;
+    background-color: red;
+    border-radius: 0.8rem;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+
+}
+
+
+
+
 
