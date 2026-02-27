@@ -1,0 +1,28 @@
+@use '../base/base';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.review-heading {
+    font-family: "Poppins", sans-serif;
+     h3 {
+        font-size: 2.8rem;
+        color: $text-color-blue;
+        text-align: center;
+     }
+     p {
+        color: $text-color-light-blue;
+        font-size: 1.6rem;
+        text-align: center;
+     }
+}
+
+.user-info {
+    @include flex-center;
+    gap: 16px;
+      .name-job {
+        display: flex;
+        flex-direction: column;
+
+      }
+}
+
