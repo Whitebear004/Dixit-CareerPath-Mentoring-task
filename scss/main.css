@@ -17,9 +17,37 @@ html {
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(220, 15, 15);
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(220, 15, 15);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+.customer-review {
+  width: 26.2rem;
+  background-color: white;
+  gap: 16px;
+  padding: 2.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 21px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
 .review-heading {
   font-family: "Poppins", sans-serif;
@@ -39,9 +67,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 }
 .user-info .name-job {
   display: flex;
   flex-direction: column;
+}
+.user-info .name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.user-info .job {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.main-review {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
