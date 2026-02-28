@@ -58,11 +58,20 @@
         color: $footer-text;
         text-decoration: none;
       }
-      img {
-        background-color: transparent;
-        border: 1px solid $footer-text;
-        border-radius: 100%;
-      }
+    .links {
+        @include flex-center;
+        gap: 2rem;
+    }
+    .fb-logo, .twitter-logo, .insta-logo {
+        @include flex-center;
+        width: 3.3rem;
+        height: 3.3rem;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+
+    }
       .address{
         text-align: center;
       }
@@ -92,8 +101,8 @@
         }
     }
     .forms {
-        grid-template-columns: 1fr 1fr; // Desktop: 2 columns
-        max-width: 90rem; // Constrain the total width of the form area
+        grid-template-columns: 1fr 1fr; 
+        max-width: 90rem; 
         margin: 4rem 3.2rem;
         gap: 1.2rem;
 
@@ -113,6 +122,26 @@
         width: 87.5rem;
         height: 20.8rem;
     }
+
+    .bottom-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 2.4rem;
+    border-bottom: 1px solid rgb(110, 110, 110);
+      h4{
+        font-weight: 100;
+        font-size: 1.6rem;
+      }
+      .address{
+        text-align: center;
+            h4 {
+                font-weight: 500;
+            }
+      }
+      
+}
 
     
 }
