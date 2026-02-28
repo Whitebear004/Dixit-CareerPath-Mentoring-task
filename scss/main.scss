@@ -2,10 +2,11 @@
 // abstracts
 @import './abstracts/variables'; // ყურადღება მიაქციე, რომ ფაილს "variebles" გიწერია
 @import './abstracts/mixins';
-@use './layout/header';
+
 // base
 @import './base/reset';
 @import './base/base';
+
 
 // layout
 @import './layout/header';

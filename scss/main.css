@@ -27,6 +27,148 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+}
+
+header:has(.burger-menu:checked) .burger {
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header:has(.burger-menu:checked) .white ul li:nth-child(1) {
+  display: none;
+}
+
+header:has(.burger-menu:checked) .white ul li:nth-child(2) {
+  display: none;
+}
+
+header:has(.burger-menu:checked) .dark ul li:nth-child(1) {
+  display: none;
+}
+
+header:has(.burger-menu:checked) .dark ul li:nth-child(2) {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu-button img:hover {
+  cursor: pointer;
+}
+
+body:has(.theme-toggle:checked) {
+  background-color: #1E2A39;
+  color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) button {
+  background-color: #444444;
+}
+
+.theme-toggle {
+  display: none;
+}
+
+.toggle-button img:hover {
+  cursor: pointer;
+}
+
+.white ul {
+  display: flex;
+  justify-content: space-around;
+}
+.white ul li:first-child {
+  margin-right: 11.9rem;
+}
+
+.dark ul {
+  display: flex;
+  justify-content: space-around;
+}
+.dark ul li:first-child {
+  margin-right: 11.9rem;
+}
+
+.dark {
+  display: none;
+}
+
+.theme-toggle:checked ~ .dark {
+  display: block;
+}
+
+.theme-toggle:checked ~ .white {
+  display: none;
+}
+
+.burger-menu:checked ~ .dark {
+  display: block;
+}
+
+.burger-menu:checked ~ .white {
+  display: none;
+}
+
+.burger ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+}
+.burger ul li a {
+  color: #000000;
+}
+
+.butons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.butons .singin {
+  border: none;
+  background-color: none;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.butons .subscribe {
+  background-color: black;
+  color: #f5f5f5;
+  border-radius: 0.8rem;
+  width: 15.3rem;
+  height: 5.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.burger {
+  display: none;
+}
+
+body:has(.theme-toggle:checked) .burger ul li a {
+  color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) .singin {
+  border: none;
+  color: #f5f5f5;
+  background-color: #1E2A39;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body:has(.theme-toggle:checked) .subscribe {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
