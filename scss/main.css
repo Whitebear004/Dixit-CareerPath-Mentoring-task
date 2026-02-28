@@ -27,6 +27,85 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+  font-size: 62.5%;
+}
+
+body:has(.theme-toggle:checked) {
+  background-color: #1E2A39;
+  color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) button {
+  background-color: #444444;
+}
+
+.theme-toggle {
+  display: none;
+}
+
+.toggle-button img:hover {
+  cursor: pointer;
+}
+
+.white ul {
+  display: flex;
+  justify-content: space-around;
+}
+.white ul li:first-child {
+  margin-right: 11.9rem;
+}
+
+.dark ul {
+  display: flex;
+  justify-content: space-around;
+}
+.dark ul li:first-child {
+  margin-right: 11.9rem;
+}
+
+.dark {
+  display: none;
+}
+
+.theme-toggle:checked ~ .dark {
+  display: block;
+}
+
+.theme-toggle:checked ~ .white {
+  display: none;
+}
+
+.burger ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 5.6rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.6rem;
+}
+.button .singin {
+  border: none;
+  background-color: #ffffff;
+  padding-bottom: 3rem;
+}
+.button .subscribe {
+  border-radius: 0.8rem;
+  width: 15.3rem;
+  height: 5.3rem;
+}
+
+body:has(.theme-toggle:checked) .burger ul li a {
+  color: #f5f5f5;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
@@ -199,6 +278,10 @@ body {
   }
   .top-footer .button {
     width: 17.6rem;
+  }
+  .top-footer .web-site a {
+    text-decoration: none;
+    color: black;
   }
   .bottom-footer {
     display: flex;
