@@ -1,0 +1,86 @@
+
+$bg-light: #ffffff;
+$text-light: #333333;
+$bg-dark: #1E2A39;
+$text-dark: #f5f5f5;
+$button-bg-dark: #444444;
+body{
+  background-color: $bg-light;
+  color: $text-light;
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+  font-size: 62.5%; 
+}
+
+body:has(.theme-toggle:checked){
+  background-color: $bg-dark;
+  color: $text-dark;
+  button {
+    background-color: $button-bg-dark;
+  }
+}
+.theme-toggle{
+  display: none;
+}
+.toggle-button img:hover{
+  cursor: pointer;
+  
+}
+.white ul{
+  display: flex;
+  justify-content: space-around;
+
+  li:first-child{
+    margin-right: 11.9rem;
+  }
+}
+.dark ul{
+  display: flex;
+  justify-content: space-around;
+  
+  li:first-child{
+    margin-right: 11.9rem;
+  }
+}
+.dark {
+   display: none;
+} 
+
+.theme-toggle:checked ~ .dark {
+  display: block;
+}
+.theme-toggle:checked ~ .white {
+  display: none;
+}
+
+.burger ul{
+       
+    display: flex;
+    flex-direction: column; 
+    font-size: 5.6rem;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    font-size:3.6rem;
+    .singin{
+       border: none;
+       background-color: #ffffff;
+       padding-bottom: 3rem;
+    }
+    .subscribe{
+        border-radius: 0.8rem;
+        width: 15.3rem;
+        height: 5.3rem;
+    }
+}
+body:has(.theme-toggle:checked){
+   .burger ul{
+     li{
+            a{
+                color: $text-dark;
+            }
+        }
+   }
+}
