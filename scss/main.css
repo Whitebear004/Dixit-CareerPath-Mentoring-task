@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background-color: rgb(220, 15, 15);
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
 }
 
@@ -33,7 +33,140 @@ html {
 }
 
 body {
-  background-color: rgb(220, 15, 15);
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+.top-footer {
+  width: 27.2rem;
+  margin: 2.4rem auto;
+  background-color: #E8DB84;
+  padding: 2.4rem 1.3rem;
+  border-radius: 1rem;
+}
+.top-footer h3 {
+  font-size: 2.8rem;
+  color: black;
+  text-align: center;
+  font-weight: 100;
+}
+.top-footer p {
+  color: black;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.top-footer .forms {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 1.6rem;
+  gap: 1.2rem;
+}
+.top-footer input, .top-footer textarea {
+  padding: 2rem 2.4rem;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 43.2rem;
+}
+.top-footer textarea {
+  height: 20.8rem;
+}
+.top-footer .button {
+  background-color: #052A44;
+  border-radius: 0.8rem;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+.top-footer .button:hover {
+  background-color: #286A98;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.top-footer .button {
+  display: block;
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  margin: 2.4rem;
+  border-bottom: 1px solid black;
+}
+.bottom-footer h4 {
+  font-size: 2rem;
+}
+.bottom-footer p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #071210;
+  text-decoration: none;
+}
+.bottom-footer img {
+  background-color: transparent;
+  border: 1px solid #071210;
+  border-radius: 100%;
+}
+.bottom-footer .address {
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .top-footer {
+    width: 122rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.4rem auto;
+  }
+  .top-footer h3 {
+    font-size: 4.2rem;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+  }
+  .top-footer p {
+    color: black;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .forms {
+    grid-template-columns: 1fr 1fr;
+    max-width: 90rem;
+    margin: 4rem 3.2rem;
+    gap: 1.2rem;
+  }
+  input {
+    padding: 2rem 2.4rem;
+    border: none;
+    border-radius: 1rem;
+    width: 43.2rem;
+    height: 5.8rem;
+  }
+  textarea {
+    padding: 2rem 2.4rem;
+    border: none;
+    border-radius: 1rem;
+    width: 87.5rem;
+    height: 20.8rem;
+  }
+}
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
 }
 
