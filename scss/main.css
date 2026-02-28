@@ -246,7 +246,7 @@ body {
 
 .customer-review {
   width: 28.2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding: 2.5rem;
   border-radius: 10px;
   display: flex;
@@ -256,6 +256,12 @@ body {
   gap: 1.6rem;
   padding: 21px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.customer-review:hover {
+  background-color: rgb(220, 220, 220);
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .review-heading {
