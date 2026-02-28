@@ -90,6 +90,8 @@ body {
 }
 .top-footer .button {
   display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .bottom-footer {
@@ -98,8 +100,7 @@ body {
   align-items: center;
   flex-direction: column;
   row-gap: 2.4rem;
-  margin: 2.4rem;
-  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
 }
 .bottom-footer h4 {
   font-size: 2rem;
@@ -145,10 +146,15 @@ body {
 
 .copyright {
   text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid rgb(156, 156, 156);
+  padding: 1rem 0;
+  margin: 0 10rem;
 }
 
 @media (min-width: 768px) {
   .top-footer {
+    border-radius: 2.9rem;
     width: 122rem;
     display: flex;
     flex-direction: column;
@@ -185,13 +191,14 @@ body {
     width: 87.5rem;
     height: 20.8rem;
   }
+  .top-footer .button {
+    width: 17.6rem;
+  }
   .bottom-footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     flex-direction: row;
-    margin: 2.4rem;
-    border-bottom: 1px solid rgb(110, 110, 110);
   }
   .bottom-footer h4 {
     font-weight: 100;
@@ -202,6 +209,13 @@ body {
   }
   .bottom-footer .address h4 {
     font-weight: 500;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 1.6rem;
+    border-top: 1px solid rgb(156, 156, 156);
+    padding: 1rem 0;
+    margin: 0 10rem;
   }
 }
 html {
