@@ -3,11 +3,14 @@
 @import '../abstracts/mixins';
 
 .top-footer {
+    display: flex;
+    flex-direction: column;
     width: 27.2rem;
     margin: 2.4rem auto;
     background-color: $yellow;
     padding: 2.4rem 1.3rem;
     border-radius: 1rem;
+    align-items: center;
         h3 {
             font-size: 2.8rem;
             color: black;
@@ -74,7 +77,15 @@
     }
       .address{
         text-align: center;
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 0.8rem;
       }
+      .social-media{
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 0.9rem;
+    }
       
 }
 .copyright{
@@ -99,29 +110,28 @@
             font-size: 1.8rem;
             text-align: center;
         }
-    }
-    .forms {
-        grid-template-columns: 1fr 1fr; 
-        max-width: 90rem; 
-        margin: 4rem 3.2rem;
-        gap: 1.2rem;
+        .forms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
 
     }
+        input {
+            padding: 2rem 2.4rem;
+            border: none;
+            border-radius: 1rem;
+            width: 43.2rem;
+            height: 5.8rem;
+        }
+        textarea{
+            padding: 2rem 2.4rem;
+            border: none;
+            border-radius: 1rem;
+            width: 87.5rem;
+            height: 20.8rem;
+        }
+    }
 
-    input {
-        padding: 2rem 2.4rem;
-        border: none;
-        border-radius: 1rem;
-        width: 43.2rem;
-        height: 5.8rem;
-    }
-    textarea{
-        padding: 2rem 2.4rem;
-        border: none;
-        border-radius: 1rem;
-        width: 87.5rem;
-        height: 20.8rem;
-    }
 
     .bottom-footer {
     display: flex;
