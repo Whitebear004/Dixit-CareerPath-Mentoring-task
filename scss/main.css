@@ -10,6 +10,7 @@ ul, ol {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 button {
@@ -278,10 +279,6 @@ body {
   }
   .top-footer .button {
     width: 17.6rem;
-  }
-  .top-footer .web-site a {
-    text-decoration: none;
-    color: black;
   }
   .bottom-footer {
     display: flex;
