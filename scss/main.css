@@ -180,11 +180,14 @@ body {
 }
 
 .top-footer {
+  display: flex;
+  flex-direction: column;
   width: 27.2rem;
   margin: 2.4rem auto;
   background-color: #E8DB84;
   padding: 2.4rem 1.3rem;
   border-radius: 1rem;
+  align-items: center;
 }
 .top-footer h3 {
   font-size: 2.8rem;
@@ -229,6 +232,8 @@ body {
 }
 .top-footer .button {
   display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .bottom-footer {
@@ -237,8 +242,7 @@ body {
   align-items: center;
   flex-direction: column;
   row-gap: 2.4rem;
-  margin: 2.4rem;
-  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
 }
 .bottom-footer h4 {
   font-size: 2rem;
@@ -249,21 +253,50 @@ body {
   color: #071210;
   text-decoration: none;
 }
-.bottom-footer img {
-  background-color: transparent;
-  border: 1px solid #071210;
-  border-radius: 100%;
+.bottom-footer .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.bottom-footer .fb-logo, .bottom-footer .twitter-logo, .bottom-footer .insta-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.3rem;
+  height: 3.3rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
 }
 .bottom-footer .address {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.bottom-footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.9rem;
 }
 
 .copyright {
   text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid rgb(156, 156, 156);
+  padding: 1rem 0;
+  margin: 0 10rem;
 }
 
 @media (min-width: 768px) {
   .top-footer {
+    border-radius: 2.9rem;
     width: 122rem;
     display: flex;
     flex-direction: column;
@@ -281,25 +314,50 @@ body {
     font-size: 1.8rem;
     text-align: center;
   }
-  .forms {
+  .top-footer .forms {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 90rem;
-    margin: 4rem 3.2rem;
-    gap: 1.2rem;
+    row-gap: 2rem;
   }
-  input {
+  .top-footer input {
     padding: 2rem 2.4rem;
     border: none;
     border-radius: 1rem;
     width: 43.2rem;
     height: 5.8rem;
   }
-  textarea {
+  .top-footer textarea {
     padding: 2rem 2.4rem;
     border: none;
     border-radius: 1rem;
     width: 87.5rem;
     height: 20.8rem;
+  }
+  .top-footer .button {
+    width: 17.6rem;
+  }
+  .bottom-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .bottom-footer h4 {
+    font-weight: 100;
+    font-size: 1.6rem;
+  }
+  .bottom-footer .address {
+    text-align: center;
+  }
+  .bottom-footer .address h4 {
+    font-weight: 500;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 1.6rem;
+    border-top: 1px solid rgb(156, 156, 156);
+    padding: 1rem 0;
+    margin: 0 10rem;
   }
 }
 html {

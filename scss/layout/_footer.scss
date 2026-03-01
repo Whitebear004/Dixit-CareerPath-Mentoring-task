@@ -3,11 +3,14 @@
 @import '../abstracts/mixins';
 
 .top-footer {
+    display: flex;
+    flex-direction: column;
     width: 27.2rem;
     margin: 2.4rem auto;
     background-color: $yellow;
     padding: 2.4rem 1.3rem;
     border-radius: 1rem;
+    align-items: center;
         h3 {
             font-size: 2.8rem;
             color: black;
@@ -40,6 +43,8 @@
     .button{
         @include buttons;
         display: block;
+        font-size: 1.6rem;
+        font-weight: 600;
     }
 }
 
@@ -47,8 +52,7 @@
     @include flex-center;
     flex-direction: column;
     row-gap: 2.4rem;
-    margin: 2.4rem;
-    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
       h4{
         font-size: 2rem;
       }
@@ -58,22 +62,44 @@
         color: $footer-text;
         text-decoration: none;
       }
-      img {
-        background-color: transparent;
-        border: 1px solid $footer-text;
-        border-radius: 100%;
-      }
+    .links {
+        @include flex-center;
+        gap: 2rem;
+    }
+    .fb-logo, .twitter-logo, .insta-logo {
+        @include flex-center;
+        width: 3.3rem;
+        height: 3.3rem;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+
+    }
       .address{
         text-align: center;
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 0.8rem;
       }
+      .social-media{
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 0.9rem;
+    }
       
 }
 .copyright{
         text-align: center;
+        font-size: 1.2rem;
+        border-top: 1px solid rgb(156, 156, 156);
+        padding: 1rem 0;
+        margin: 0 10rem;
       }
 
 @media (min-width: 768px) {
     .top-footer {
+        border-radius: 2.9rem;
         width: 122rem;
         display: flex;
         flex-direction: column;
@@ -90,30 +116,56 @@
             font-size: 1.8rem;
             text-align: center;
         }
-    }
-    .forms {
-        grid-template-columns: 1fr 1fr; // Desktop: 2 columns
-        max-width: 90rem; // Constrain the total width of the form area
-        margin: 4rem 3.2rem;
-        gap: 1.2rem;
+        .forms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
 
     }
-
-    input {
-        padding: 2rem 2.4rem;
-        border: none;
-        border-radius: 1rem;
-        width: 43.2rem;
-        height: 5.8rem;
+        input {
+            padding: 2rem 2.4rem;
+            border: none;
+            border-radius: 1rem;
+            width: 43.2rem;
+            height: 5.8rem;
+        }
+        textarea{
+            padding: 2rem 2.4rem;
+            border: none;
+            border-radius: 1rem;
+            width: 87.5rem;
+            height: 20.8rem;
+        }
+        .button{
+            width: 17.6rem;
+        }
     }
-    textarea{
-        padding: 2rem 2.4rem;
-        border: none;
-        border-radius: 1rem;
-        width: 87.5rem;
-        height: 20.8rem;
+
+
+    .bottom-footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: row;
+        h4{
+            font-weight: 100;
+            font-size: 1.6rem;
+        }
+        .address{
+            text-align: center;
+                h4 {
+                    font-weight: 500;
+                }
+        }  
+    }
+    .copyright{
+        text-align: center;
+        font-size: 1.6rem;
+        border-top: 1px solid rgb(156, 156, 156);
+        padding: 1rem 0;
+        margin: 0 10rem;
     }
 
-    
-}
+        
+    }
 
