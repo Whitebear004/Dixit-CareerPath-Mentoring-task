@@ -2,7 +2,7 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-
+// Styles for Customer reviews
 
 .review {
     display: flex;
@@ -22,7 +22,7 @@
 
 .customer-review {
     width: 28.2rem;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     padding: 2.5rem;
     border-radius: 10px;
     @include flex-center;
@@ -30,6 +30,12 @@
     gap: 1.6rem;
     padding: 21px;
     box-shadow:$box-shadow;
+    cursor: pointer;
+    transition: all 0.4s ease;
+        &:hover {
+            background-color: rgb(220, 220, 220) ;
+            box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+        }
 }
 
 .review-heading {
