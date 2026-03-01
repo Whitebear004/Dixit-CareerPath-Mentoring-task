@@ -40,22 +40,6 @@ header:has(.burger-menu:checked) .burger {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header:has(.burger-menu:checked) .white ul li:nth-child(1) {
-  display: none;
-}
-
-header:has(.burger-menu:checked) .white ul li:nth-child(2) {
-  display: none;
-}
-
-header:has(.burger-menu:checked) .dark ul li:nth-child(1) {
-  display: none;
-}
-
-header:has(.burger-menu:checked) .dark ul li:nth-child(2) {
-  display: none;
-}
-
 .burger-menu {
   display: none;
 }
@@ -167,6 +151,56 @@ body:has(.theme-toggle:checked) .singin {
 body:has(.theme-toggle:checked) .subscribe {
   background-color: #ffffff;
   color: #000000;
+}
+body:has(.theme-toggle:checked) body {
+  color: #f5f5f5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  row-gap: 1.5rem;
+  margin-top: 3.5rem;
+  color: #183B56;
+}
+.content p {
+  width: 27.2rem;
+  text-align: center;
+}
+.content .button-container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.content .button {
+  height: 3.7rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.button-container button:last-child img {
+  margin-right: 1.2rem;
+}
+.button-container button:last-child {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+.img-container :first-child {
+  z-index: -1;
+}
+.img-container :last-child {
+  position: absolute;
+  z-index: 1;
 }
 
 html {

@@ -1,9 +1,11 @@
 
 $bg-light: #ffffff;
 $text-light: #000000;
+$h1-light:#183B56;
 $bg-dark: #1E2A39;
 $text-dark: #f5f5f5;
 $button-bg-dark: #444444;
+$font-size:1.6rem;
 body{
   background-color: $bg-light;
   color: $text-light;
@@ -16,22 +18,21 @@ header:has(.burger-menu:checked) .burger {
   flex-direction: column;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-header:has(.burger-menu:checked) .white ul li:nth-child(1){
-  display: none;
-}
-header:has(.burger-menu:checked) .white ul li:nth-child(2){
-  display: none;
-}
+// header:has(.burger-menu:checked) .white ul li:nth-child(1){
+//   display: none;
+// }
+// header:has(.burger-menu:checked) .white ul li:nth-child(2){
+//   display: none;
+// }
 
-header:has(.burger-menu:checked) .dark ul li:nth-child(1){
-  display: none;
-}
-header:has(.burger-menu:checked) .dark ul li:nth-child(2){
-  display: none;
-}
+// header:has(.burger-menu:checked) .dark ul li:nth-child(1){
+//   display: none;
+// }
+// header:has(.burger-menu:checked) .dark ul li:nth-child(2){
+//   display: none;
+// }
 
-
-.burger-menu{
+ .burger-menu{
   display: none;
 }
 .burger-menu-button img:hover{
@@ -92,7 +93,7 @@ body:has(.theme-toggle:checked){
     flex-direction: column; 
     align-items: center;
     row-gap: 1.5rem;
-    font-size: 1.6rem;
+    font-size:$font-size;
     margin-bottom: 3.5rem;
     margin-top: 3.5rem;
     li{
@@ -109,7 +110,7 @@ body:has(.theme-toggle:checked){
        border: none;
        background-color:none;
        margin-bottom: 3rem;
-       font-size: 1.6rem; 
+       font-size: $font-size; 
        font-weight: 400; 
     }
     .subscribe{
@@ -118,7 +119,7 @@ body:has(.theme-toggle:checked){
         border-radius: 0.8rem;
         width: 15.3rem;
         height: 5.3rem; 
-        font-size: 1.6rem; 
+        font-size: $font-size; 
          font-weight: 600; 
     }
   }
@@ -143,5 +144,56 @@ body:has(.theme-toggle:checked){
     .subscribe{
         background-color:$bg-light;
         color:$text-light;
+    }
+    body{
+       color: $text-dark;
+    }
+}
+ 
+  .content{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $font-size;
+      row-gap: 1.5rem;
+      margin-top: 3.5rem;
+      color: $h1-light;
+      p{
+        width: 27.2rem;
+        text-align: center;
+      }
+       .button-container{
+         display: flex;
+         flex-direction: row;
+         column-gap: 2rem;
+          
+       }
+        .button{
+          height:3.7rem;
+          font-size: $font-size;
+          font-weight:500;
+          margin-bottom: 2rem;
+        }
+         
+}
+ .button-container button:last-child{
+      
+      img{
+        margin-right: 1.2rem;
+      }
+     background-color: $bg-light;
+     color:$text-light
+     
+ }
+.img-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+    :first-child{
+      z-index: -1;
+    }
+    :last-child{
+      position: absolute;
+      z-index: 1;
     }
 }
