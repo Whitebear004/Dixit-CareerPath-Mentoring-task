@@ -30,11 +30,23 @@ body {
 
 body {
   background-color: #ffffff;
-  color: #333333;
-  font-family: system-ui, sans-serif;
+  color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
   padding: 2rem;
-  font-size: 62.5%;
+}
+
+header:has(.burger-menu:checked) .burger {
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu-button img:hover {
+  cursor: pointer;
 }
 
 body:has(.theme-toggle:checked) {
@@ -81,30 +93,115 @@ body:has(.theme-toggle:checked) button {
   display: none;
 }
 
+.burger-menu:checked ~ .dark {
+  display: block;
+}
+
+.burger-menu:checked ~ .white {
+  display: none;
+}
+
 .burger ul {
   display: flex;
   flex-direction: column;
-  font-size: 5.6rem;
+  align-items: center;
+  row-gap: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+}
+.burger ul li a {
+  color: #000000;
 }
 
-.button {
+.butons {
   display: flex;
   flex-direction: column;
-  font-size: 3.6rem;
+  align-items: center;
 }
-.button .singin {
+.butons .singin {
   border: none;
-  background-color: #ffffff;
-  padding-bottom: 3rem;
+  background-color: none;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
-.button .subscribe {
+.butons .subscribe {
+  background-color: black;
+  color: #f5f5f5;
   border-radius: 0.8rem;
   width: 15.3rem;
   height: 5.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.burger {
+  display: none;
 }
 
 body:has(.theme-toggle:checked) .burger ul li a {
   color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) .singin {
+  border: none;
+  color: #f5f5f5;
+  background-color: #1E2A39;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body:has(.theme-toggle:checked) .subscribe {
+  background-color: #ffffff;
+  color: #000000;
+}
+body:has(.theme-toggle:checked) body {
+  color: #f5f5f5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  row-gap: 1.5rem;
+  margin-top: 3.5rem;
+  color: #183B56;
+}
+.content p {
+  width: 27.2rem;
+  text-align: center;
+}
+.content .button-container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.content .button {
+  height: 3.7rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.button-container button:last-child img {
+  margin-right: 1.2rem;
+}
+.button-container button:last-child {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+.img-container :first-child {
+  z-index: -1;
+}
+.img-container :last-child {
+  position: absolute;
+  z-index: 1;
 }
 
 html {

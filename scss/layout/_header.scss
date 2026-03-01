@@ -1,16 +1,42 @@
 
 $bg-light: #ffffff;
-$text-light: #333333;
+$text-light: #000000;
+$h1-light:#183B56;
 $bg-dark: #1E2A39;
 $text-dark: #f5f5f5;
 $button-bg-dark: #444444;
+$font-size:1.6rem;
 body{
   background-color: $bg-light;
   color: $text-light;
-  font-family: system-ui, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   padding: 2rem;
-  font-size: 62.5%; 
+}
+
+header:has(.burger-menu:checked) .burger {
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+// header:has(.burger-menu:checked) .white ul li:nth-child(1){
+//   display: none;
+// }
+// header:has(.burger-menu:checked) .white ul li:nth-child(2){
+//   display: none;
+// }
+
+// header:has(.burger-menu:checked) .dark ul li:nth-child(1){
+//   display: none;
+// }
+// header:has(.burger-menu:checked) .dark ul li:nth-child(2){
+//   display: none;
+// }
+
+ .burger-menu{
+  display: none;
+}
+.burger-menu-button img:hover{
+  cursor: pointer;
 }
 
 body:has(.theme-toggle:checked){
@@ -25,7 +51,6 @@ body:has(.theme-toggle:checked){
 }
 .toggle-button img:hover{
   cursor: pointer;
-  
 }
 .white ul{
   display: flex;
@@ -54,27 +79,54 @@ body:has(.theme-toggle:checked){
   display: none;
 }
 
+.burger-menu:checked ~ .dark {
+  display: block;
+}
+.burger-menu:checked ~ .white {
+  display: none;
+}
+
+
 .burger ul{
        
     display: flex;
     flex-direction: column; 
-    font-size: 5.6rem;
+    align-items: center;
+    row-gap: 1.5rem;
+    font-size:$font-size;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    li{
+      a{
+        color: $text-light;
+      }
+    }
 }
-.button{
+.butons{
     display: flex;
     flex-direction: column;
-    font-size:3.6rem;
+    align-items: center;    
     .singin{
        border: none;
-       background-color: #ffffff;
-       padding-bottom: 3rem;
+       background-color:none;
+       margin-bottom: 3rem;
+       font-size: $font-size; 
+       font-weight: 400; 
     }
     .subscribe{
+        background-color: black;
+        color: $text-dark;
         border-radius: 0.8rem;
         width: 15.3rem;
-        height: 5.3rem;
+        height: 5.3rem; 
+        font-size: $font-size; 
+         font-weight: 600; 
     }
-}
+  }
+    .burger{
+    display: none;
+  }
+
 body:has(.theme-toggle:checked){
    .burger ul{
      li{
@@ -83,4 +135,65 @@ body:has(.theme-toggle:checked){
             }
         }
    }
+    .singin{
+       border: none;
+       color: $text-dark;
+       background-color:$bg-dark ;
+       transition: background-color 0.3s ease, color 0.3s ease;
+}
+    .subscribe{
+        background-color:$bg-light;
+        color:$text-light;
+    }
+    body{
+       color: $text-dark;
+    }
+}
+ 
+  .content{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $font-size;
+      row-gap: 1.5rem;
+      margin-top: 3.5rem;
+      color: $h1-light;
+      p{
+        width: 27.2rem;
+        text-align: center;
+      }
+       .button-container{
+         display: flex;
+         flex-direction: row;
+         column-gap: 2rem;
+          
+       }
+        .button{
+          height:3.7rem;
+          font-size: $font-size;
+          font-weight:500;
+          margin-bottom: 2rem;
+        }
+         
+}
+ .button-container button:last-child{
+      
+      img{
+        margin-right: 1.2rem;
+      }
+     background-color: $bg-light;
+     color:$text-light
+     
+ }
+.img-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+    :first-child{
+      z-index: -1;
+    }
+    :last-child{
+      position: absolute;
+      z-index: 1;
+    }
 }
