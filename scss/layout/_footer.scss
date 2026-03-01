@@ -187,6 +187,15 @@
         margin: 0 10rem;
     }
 
+    body:has(.theme-toggle:checked) {
+        .borrom-footer {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    }
+
         
     }
 

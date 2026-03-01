@@ -303,6 +303,12 @@ body {
     padding: 1rem 0;
     margin: 0 10rem;
   }
+  body:has(.theme-toggle:checked) .borrom-footer {
+    color: white;
+  }
+  body:has(.theme-toggle:checked) a {
+    color: white;
+  }
 }
 html {
   font-size: 62.5%;
