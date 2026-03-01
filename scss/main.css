@@ -214,6 +214,15 @@ body {
   box-sizing: border-box;
 }
 
+body:has(.theme-toggle:checked) footer p,
+body:has(.theme-toggle:checked) footer a {
+  color: white;
+}
+
+body:has(.theme-toggle:checked) footer span {
+  background-color: white;
+}
+
 .top-footer {
   display: flex;
   flex-direction: column;
