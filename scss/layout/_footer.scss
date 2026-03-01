@@ -1,0 +1,119 @@
+@import '../base/base';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.top-footer {
+    width: 27.2rem;
+    margin: 2.4rem auto;
+    background-color: $yellow;
+    padding: 2.4rem 1.3rem;
+    border-radius: 1rem;
+        h3 {
+            font-size: 2.8rem;
+            color: black;
+            text-align: center;
+            font-weight:100;
+        }
+        p {
+            color: black;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+    .forms {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-top: 1.6rem;
+        gap: 1.2rem;
+
+    }
+    input, textarea {
+        padding: 2rem 2.4rem;
+        border: none;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 43.2rem;
+    }
+    textarea{
+        height: 20.8rem;
+    }
+    .button{
+        @include buttons;
+        display: block;
+    }
+}
+
+.bottom-footer {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    margin: 2.4rem;
+    border-bottom: 1px solid black;
+      h4{
+        font-size: 2rem;
+      }
+      p{
+        text-align: center;
+        font-size: 1.6rem;
+        color: $footer-text;
+        text-decoration: none;
+      }
+      img {
+        background-color: transparent;
+        border: 1px solid $footer-text;
+        border-radius: 100%;
+      }
+      .address{
+        text-align: center;
+      }
+      
+}
+.copyright{
+        text-align: center;
+      }
+
+@media (min-width: 768px) {
+    .top-footer {
+        width: 122rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2.4rem auto;
+        h3 {
+            font-size: 4.2rem;
+            color: black;
+            text-align: center;
+            font-weight:600;
+        }
+        p {
+            color: black;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+    .forms {
+        grid-template-columns: 1fr 1fr; // Desktop: 2 columns
+        max-width: 90rem; // Constrain the total width of the form area
+        margin: 4rem 3.2rem;
+        gap: 1.2rem;
+
+    }
+
+    input {
+        padding: 2rem 2.4rem;
+        border: none;
+        border-radius: 1rem;
+        width: 43.2rem;
+        height: 5.8rem;
+    }
+    textarea{
+        padding: 2rem 2.4rem;
+        border: none;
+        border-radius: 1rem;
+        width: 87.5rem;
+        height: 20.8rem;
+    }
+
+    
+}
+

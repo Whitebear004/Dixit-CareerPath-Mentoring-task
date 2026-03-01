@@ -1,121 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./scss/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-    <header></header>
+  </head>
+  <body>
+    <header>
+      <header>
+        <nav>
+          <input type="checkbox" id="theme-toggle" class="theme-toggle" />
+          <div class="white">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./asets/logo/Logo (2).png" alt="logo" />
+                </a>
+              </li>
+              <li>
+                <label for="theme-toggle" class="toggle-button">
+                  <img src="./asets/icons/ThemeButton.png" alt="" />
+                </label>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./asets/icons/menu-icon.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="dark">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./asets/logo/Logo (3).png" alt="logo" />
+                </a>
+              </li>
+              <li>
+                <label for="theme-toggle" class="toggle-button">
+                  <img
+                    src="./asets/icons/ThemeButton (1).png"
+                    alt="themebutton"
+                  />
+                </label>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./asets/icons/Shape.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="burger">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="button">
+            <button class="singin">Sign In</button>
+            <button class="subscribe">Free Trial</button>
+          </div>
+        </nav>
+      </header>
+    </header>
     <main>
-        <section></section>
-        <section></section>
-       <section class="services">
-      <div class="sectioncontainer">
-        <div class="sectionimages">
-          <img src="/images/assets/main-pictures/gridpic1.1.png" class="main-img" />
-          <div class="small-imgs">
-            <img src="/images/assets/main-pictures/gridpic1.2.png" />
-            <img src="/images/assets/main-pictures/gridpic1.3.png" />
+      <section class="services">
+        <div class="sectioncontainer">
+          <div class="sectioncontent">
+            <h2>Our Services</h2>
+            <p>
+              Teachers don’t get lost in the grid view and have a dedicated
+              Podium space. Teachers don’t get lost in the grid view and have a
+              dedicated Podium space.
+            </p>
+            
+            <ul class="list">
+              <li>
+                <div>
+                  <img src="/images/assets/icons/li-icon.svg" alt="icon" />
+                </div>
+                Personality Assessment
+              </li>
+              <li>
+                <div>
+                  <img src="/images/assets/icons/li-icon.svg" alt="icon" />
+                </div>
+                Skill Evaluations
+              </li>
+              <li>
+                <div>
+                  <img src="/images/assets/icons/li-icon.svg" alt="icon" />
+                </div>
+                Career Workshop
+              </li>
+            </ul>
+          </div>
+          <div class="bg-bigbluecircle">
+            <div class="bigbluecircle"></div>
+            <div class="sectionimages">
+
+              <div class="colourcircles">
+              <div class="round icon1"></div>
+              <div class="round icon2"></div>
+              <div class="round icon3"></div>
+            </div>
+            
+            <div class="gridpictures">
+              <img
+              src="/images/assets/main-pictures/gridpic1.1.png"
+              class="main-img"
+              />
+              <div class="small-imgs">
+                <img src="/images/assets/main-pictures/gridpic1.2.png" />
+                <img src="/images/assets/main-pictures/gridpic1.3.png" />
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="sectioncontent">
-          <h2>Our Services</h2>
-          <p>
-            Teachers don’t get lost in the grid view and have a dedicated Podium
-            space.
-          </p>
-
-          <ul>
-            <li>Personality Assessment</li>
-            <li>Skill Evaluations</li>
-            <li>Career Workshop</li>
-          </ul>
-
-          <button>Get Started</button>
-        </div>
+        <button class="btngetstarted">Get Started</button>
       </div>
     </section>
+        <section class="stories">
+          <div class="sectioncontainer">
+            <div class="sectioncontent">
+              <h2>Stories</h2>
+              <p>
+                Teachers don’t get lost in the grid view and have a dedicated Podium
+                space. Teachers don’t get lost in the grid view and have a dedicated
+                Podium space.
+              </p>
+              <p class="p2">
+                Teachers don’t get lost in the grid view and have a dedicated Podium
+                space. Teachers don’t get lost in the grid view and have a dedicated
+                Podium space.
+              </p>
+          
+              <ul class="list">
+                <li>
+                  <div>
+                    <img src="/images/assets/icons/li-icon.svg" alt="icon" />
+                  </div>
+                   Skill Evaluations
+                </li>
+                <li>
+                  <div>
+                    <img src="/images/assets/icons/li-icon.svg" alt="icon" />
+                  </div>
+                 Career Workshop
+                </li>
+              </ul>
+            </div>
+    <div class="bg-bigbluecircle">
+      <div class="bigbluecircle"></div>
+      <div class="sectionimages">
+        <div class="colourcircles">
+          <div class="round icon1"></div>
+          <div class="round icon2"></div>
+          <div class="round icon3"></div>
+        </div>
 
-    <section class="stories">
-      <div class="sectioncontainer">
-        <div class="sectionimages">
-          <img src="/images/assets/main-pictures/gridpic2.1.png" class="main-img" />
+        <div class="gridpictures">
+          <img
+            src="/images/assets/main-pictures/gridpic2.1.png"
+            class="main-img"
+          />
           <div class="small-imgs">
             <img src="/images/assets/main-pictures/gridpic2.2.png" />
             <img src="/images/assets/main-pictures/gridpic2.3.png" />
           </div>
         </div>
-
-        <div class="sectioncontent">
-          <h2>Stories</h2>
-          <p>
-            Teachers don’t get lost in the grid view and have a dedicated Podium
-            space.
-          </p>
-
-          <ul>
-            <li>Skill Evaluations</li>
-            <li>Career Workshop</li>
-          </ul>
-
-          <button>Get Started</button>
-        </div>
       </div>
-    </section>
-        <section class="review">
-            <div class="review-heading">
-                <h3>Reviews from our customers</h3>
-                <p>CareerPathNow has got more than 100k positive ratings from our users around the world. </p>
+    </div>
+    <button class="btngetstarted">Get Started</button>
+  </div>
+</section>
+      <section class="review">
+        <div class="review-heading">
+          <h3>Reviews from our customers</h3>
+          <p>
+            CareerPathNow has got more than 100k positive ratings from our users
+            around the world.
+          </p>
+        </div>
+        <div class="card-wrapper">
+          <article class="customer-review">
+            <div class="user-info">
+              <img
+                src="./images/assets/main-pictures/user1.png"
+                alt="user-picture"
+              />
+              <div class="name-job">
+                <span class="name">Mila McSabbu</span>
+                <span class="job">Freelance Designer</span>
+              </div>
             </div>
-            <article class="customer-review">
-                <div class="user-info">
-                    <img src="./images/assets/main-pictures/user1.png" alt="user-picture">
-                    <div class="name-job">
-                        <span class="name">Mila McSabbu</span>
-                        <span class="job">Freelance Designer</span>
-                    </div>
-                </div>
-                <div class="main-review">
-                    <p>We test and compare the best project management software for 
-                        collaborating with a team, hitting deadlines.</p>
-                </div>
-            </article>
-                        <article class="customer-review">
-                <div class="user-info">
-                    <img src="./images/assets/main-pictures/user2.png" alt="user-picture">
-                    <div class="name-job">
-                        <span class="name">Mila McSabbu</span>
-                        <span class="job">Freelance Designer</span>
-                    </div>
-                </div>
-                <div class="main-review">
-                    <p>We test and compare the best project management software for 
-                        collaborating with a team, hitting deadlines.</p>
-                </div>
-            </article>
-                        <article class="customer-review">
-                <div class="user-info">
-                    <img src="./images/assets/main-pictures/user3.png" alt="user-picture">
-                    <div class="name-job">
-                        <span class="name">Mila McSabbu</span>
-                        <span class="job">Freelance Designer</span>
-                        <span class="job">Freelance Designer</span>
-                    </div>
-                </div>
-                <div class="main-review">
-                    <p>We test and compare the best project management software for 
-                        collaborating with a team, hitting deadlines.</p>
-                </div>
-            </article>
-        </section>
-
+            <div class="main-review">
+              <p>
+                We test and compare the best project management software for
+                collaborating with a team, hitting deadlines.
+              </p>
+            </div>
+          </article>
+          <article class="customer-review">
+            <div class="user-info">
+              <img
+                src="./images/assets/main-pictures/user2.png"
+                alt="user-picture"
+              />
+              <div class="name-job">
+                <span class="name">Mila McSabbu</span>
+                <span class="job">Freelance Designer</span>
+              </div>
+            </div>
+            <div class="main-review">
+              <p>
+                We test and compare the best project management software for
+                collaborating with a team, hitting deadlines.
+              </p>
+            </div>
+          </article>
+          <article class="customer-review">
+            <div class="user-info">
+              <img
+                src="./images/assets/main-pictures/user3.png"
+                alt="user-picture"
+              />
+              <div class="name-job">
+                <span class="name">Mila McSabbu</span>
+                <span class="job">Freelance Designer</span>
+                <span class="job">Freelance Designer</span>
+              </div>
+            </div>
+            <div class="main-review">
+              <p>
+                We test and compare the best project management software for
+                collaborating with a team, hitting deadlines.
+              </p>
+            </div>
+          </article>
+        </div>
+        <button class="button">See More</button>
+        <div class="arrows">
+          <button class="arrow arrow-left">
+            <img src="./images/assets/icons/arrow-left.png" alt="arrow" />
+          </button>
+          <button class="arrow arrow-right">
+            <img src="./images/assets/icons/arrow-right.png" alt="arrow" />
+          </button>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-</body>
+    <footer>
+      <section class="top-footer">
+        <form>
+          <h3>Let's work together to grow your business</h3>
+          <p>
+            Sollicitudin ac orci phasellus egestas tellus rutrum. Lacus viverra
+            vitae congue eu consequat ac. Nulla pharetra diam sit amet nisl
+            suscipit.
+          </p>
+          <div class="forms">
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="First name"
+              required
+            />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Last name"
+              required
+            />
+            <input
+              type="email"
+              id="mail"
+              name="mail"
+              placeholder="Email Address"
+              required
+            />
+            <input
+              type="number"
+              id="phone-number"
+              name="phone-number"
+              placeholder="Phone Number"
+              required
+            />
+            <textarea
+              name="description"
+              id="description"
+              rows="10"
+              placeholder="Description"
+            ></textarea>
+          </div>
+        </form>
+        <button class="button">Contact Us</button>
+      </section>
+      <section class="bottom-footer">
+        <div class="address">
+          <h4>CareerPathNow</h4>
+          <p>Address of the organization</p>
+          <p>+01 (787)-8765456</p>
+        </div>
+        <div class="social-media">
+          <h4>Find Us On Social Media:</h4>
+          <div class="links">
+            <img src="./images/assets/icons/Facebook.png" alt="Faceebook" />
+            <img src="./images/assets/icons/Twitter.png" alt="Twitter" />
+            <img src="./images/assets/icons/Instagram.png" alt="Instagram" />
+          </div>
+        </div>
+        <div class="web-site">
+          <p>We’re Always Happy To Help</p>
+          <p><a href="#">CareerPathNow@gmail.com</a></p>
+        </div>
+      </section>
+      <div class="copyright">Copyright © 2024 CareerPathNow</div>
+    </footer>
+  </body>
 </html>

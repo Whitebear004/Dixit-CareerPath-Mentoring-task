@@ -1,0 +1,455 @@
+@import "../base/base";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.services {
+  margin: 2.4rem auto;
+  background-color: $yellow;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 27.8rem;
+  font-family: "Poppins", sans-serif;
+  padding: 2.4rem 1.3rem;
+
+  h2 {
+    @include flex-center;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $text-color-blue;
+    text-align: center;
+  }
+
+  p {
+    max-width: 25rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    color: $black;
+    text-align: center;
+    padding: 1.6rem 0 2.4rem 0;
+  }
+
+  .list {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.4rem;
+
+      div {
+        background-color: white;
+        border-radius: 50%;
+        width: 3.8rem;
+        height: 3.8rem;
+        @include flex-center;
+      }
+    }
+  }
+  .sectionimages {
+    width: 100%;
+    max-width: 23.368rem;
+    margin: 2.4rem auto 0;
+    border-radius: 0.544rem;
+    background-color: rgba(244, 244, 244, 0.6); //bg-გამჭვირვალობა
+    overflow: hidden;
+
+    .colourcircles {
+      background-color: #eaeaea;
+      display: flex;
+      gap: 0.303rem;
+      height: 1.366rem;
+      border-radius: 0.544rem 0.544rem 0 0;
+      align-items: center;
+      padding-left: 0.809rem;
+      margin-bottom: 1.06rem;
+
+      .round {
+        @include colourcircles;
+      }
+      .icon1 {
+        background-color: #ee6767;
+      }
+      .icon2 {
+        background-color: #f6c566;
+      }
+      .icon3 {
+        background-color: #5beb7b;
+      }
+    }
+
+    .gridpictures {
+      padding: 0 1.6rem 1.6rem 1.6rem;
+
+      img:first-child {
+        width: 100%;
+        margin-bottom: 1.19rem;
+      }
+      .small-imgs {
+        display: flex;
+        gap: 1.214rem;
+        img {
+          height: 8.902rem;
+        }
+      }
+    }
+  }
+  button {
+    @include buttons;
+    margin: 1.5rem auto 0;
+    display: block;
+  }
+}
+
+.bg-bigbluecircle {
+  position: relative;
+  z-index: 0;
+  padding: 0 0.932rem 2.225rem 0.9rem;
+  .bigbluecircle {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #052a44;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+/* =========================
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .services {
+    min-width: 1200px;
+    padding: 40px 80px 40px 59px;
+    border-radius: 1.5rem;
+
+    .sectioncontainer {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 2rem 8.7rem;
+      max-width: none;
+      width: 100%;
+
+      p {
+        font-size: 1.8rem;
+        line-height: 28px;
+        max-width: 51.5rem;
+        text-align: left;
+      }
+
+      li {
+        font-size: 1.8rem;
+        div {
+          width: 5.3rem;
+          height: 5.3rem;
+        }
+      }
+
+      .sectionimages {
+        margin: 0;
+        max-height: 46.2rem;
+        max-width: 47.4rem;
+        background-color: rgba(244, 244, 244, 0.6); //bg-გამჭვირვალობა
+
+        .colourcircles {
+          margin-bottom: 2rem;
+        }
+        .gridpictures {
+          padding: 0 3.2rem 3.2rem 3.2rem;
+
+          img:first-child {
+            width: 100%;
+            margin-bottom: 2.4rem;
+          }
+          .small-imgs {
+            display: flex;
+            gap: 2.4rem;
+            img {
+              height: 17.6rem;
+            }
+          }
+        }
+      }
+
+      .bg-bigbluecircle {
+        grid-row: 1 / 3;
+        position: relative;
+        z-index: 0;
+        padding: 0 0 4.4rem 3.7rem;
+        .bigbluecircle {
+          position: absolute;
+          width: 19.7rem;
+          height: 19.7rem;
+          background-color: #052a44;
+          border-radius: 50%;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+      .sectioncontent {
+        grid-column: 2;
+        grid-row: 1;
+        h2 {
+          justify-content: start;
+          color: black;
+          font-weight: 600;
+          font-size: 42px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      .btngetstarted {
+        margin-top: 12px;
+        position: absolute;
+        grid-column: 2;
+        grid-row: 2;
+        top: 0;
+      }
+      button {
+        padding: 1.5rem 4.3rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+// stories
+
+.stories {
+  display: none;
+  margin: 2.4rem auto;
+  background-color: $yellow;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 27.8rem;
+  font-family: "Poppins", sans-serif;
+  padding: 2.4rem 1.3rem;
+
+  h2 {
+    @include flex-center;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $text-color-blue;
+    text-align: center;
+  }
+
+  p {
+    max-width: 25rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    color: $black;
+    text-align: center;
+    padding: 1.6rem 0 1.6rem 0;
+  }
+  .p2 {
+    padding: 0 0 2.4rem 0;
+  }
+
+  .list {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.4rem;
+
+      div {
+        background-color: white;
+        border-radius: 50%;
+        width: 3.8rem;
+        height: 3.8rem;
+        @include flex-center;
+      }
+    }
+  }
+  .sectionimages {
+    width: 100%;
+    max-width: 23.368rem;
+    margin: 2.4rem auto 0;
+    border-radius: 0.544rem;
+    background-color: rgba(244, 244, 244, 0.6); //bg-გამჭვირვალობა
+    overflow: hidden;
+
+    .colourcircles {
+      background-color: #eaeaea;
+      display: flex;
+      gap: 0.303rem;
+      height: 1.366rem;
+      border-radius: 0.544rem 0.544rem 0 0;
+      align-items: center;
+      padding-left: 0.809rem;
+      margin-bottom: 1.06rem;
+
+      .round {
+        @include colourcircles;
+      }
+      .icon1 {
+        background-color: #ee6767;
+      }
+      .icon2 {
+        background-color: #f6c566;
+      }
+      .icon3 {
+        background-color: #5beb7b;
+      }
+    }
+
+    .gridpictures {
+      padding: 0 1.6rem 1.6rem 1.6rem;
+
+      img:first-child {
+        width: 100%;
+        margin-bottom: 1.19rem;
+      }
+      .small-imgs {
+        display: flex;
+        gap: 1.214rem;
+        img {
+          height: 8.902rem;
+        }
+      }
+    }
+  }
+  button {
+    @include buttons;
+    margin: 1.5rem auto 0;
+    display: block;
+  }
+
+  .bg-bigbluecircle {
+    position: relative;
+    z-index: 0;
+    padding: 0 0.932rem 2.225rem 0.9rem;
+    .bigbluecircle {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      background-color: #052a44;
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
+/* =========================
+   768px+
+========================= */
+
+
+@media (min-width: 768px) {
+  .stories {
+    display: block;
+    min-width: 1200px;
+    padding: 40px 48px 40px 59px;
+    border-radius: 1.5rem;
+
+    .sectioncontainer {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      max-width: none;
+      width: 100%;
+
+      p {
+        font-size: 1.8rem;
+        line-height: 28px;
+        max-width: 51.5rem;
+        text-align: left;
+      }
+
+      li {
+        font-size: 1.8rem;
+        div {
+          width: 5.3rem;
+          height: 5.3rem;
+        }
+      }
+
+      .sectionimages {
+        margin: 0;
+        max-height: 46.2rem;
+        max-width: 47.4rem;
+
+        .colourcircles {
+          margin-bottom: 2rem;
+        }
+        .gridpictures {
+          padding: 0 3.2rem 3.2rem 3.2rem;
+
+          img:first-child {
+            width: 100%;
+            margin-bottom: 2.4rem;
+          }
+          .small-imgs {
+            display: flex;
+            gap: 2.4rem;
+            img {
+              height: 17.6rem;
+            }
+          }
+        }
+      }
+
+      .bg-bigbluecircle {
+        grid-row: 1 / 3;
+        position: relative;
+        z-index: 0;
+        padding: 0 0 4.4rem 3.7rem;
+        .bigbluecircle {
+          position: absolute;
+          width: 19.7rem;
+          height: 19.7rem;
+          background-color: #052a44;
+          border-radius: 50%;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+      .sectioncontent {
+        grid-column: 1;
+        grid-row: 1;
+        h2 {
+          justify-content: start;
+          color: black;
+          font-weight: 600;
+          font-size: 42px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      .btngetstarted {
+        position: absolute;
+        grid-column: 1;
+        grid-row: 2;
+        top: 0;
+        margin-top: 0;
+      }
+      button {
+        padding: 1.5rem 4.3rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
