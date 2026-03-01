@@ -5,6 +5,15 @@
 
 // Styles for section- Contact Form
 
+body:has(.theme-toggle:checked) footer p,
+body:has(.theme-toggle:checked) footer a {
+    color: white ;
+}
+body:has(.theme-toggle:checked) footer span{
+    background-color: white;
+}
+
+
 .top-footer {
     display: flex;
     flex-direction: column;
@@ -82,26 +91,28 @@
         cursor: pointer;
 
     }
-      .address{
-        text-align: center;
-        @include flex-center;
-        flex-direction: column;
-        row-gap: 0.8rem;
-      }
-      .social-media{
-        @include flex-center;
-        flex-direction: column;
-        row-gap: 0.9rem;
-    }
+        .address{
+            text-align: center;
+            @include flex-center;
+            flex-direction: column;
+            row-gap: 0.8rem;
+        }
+        .social-media{
+            @include flex-center;
+            flex-direction: column;
+            row-gap: 0.9rem;
+        }
       
-}
-.copyright{
-        text-align: center;
-        font-size: 1.2rem;
-        border-top: 1px solid rgb(156, 156, 156);
-        padding: 1rem 0;
-        margin: 0 10rem;
-      }
+}   
+
+
+    .copyright{
+            text-align: center;
+            font-size: 1.2rem;
+            border-top: 1px solid rgb(156, 156, 156);
+            padding: 1rem 0;
+            margin: 0 10rem;
+        }
 
 
     //   Styles for responsive design
@@ -185,6 +196,15 @@
         border-top: 1px solid rgb(156, 156, 156);
         padding: 1rem 0;
         margin: 0 10rem;
+    }
+
+    body:has(.theme-toggle:checked) {
+        .borrom-footer {
+            color: white;
+        }
+        a {
+            color: white;
+        }
     }
 
         
