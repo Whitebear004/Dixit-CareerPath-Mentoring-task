@@ -306,13 +306,12 @@ body {
   margin: 1.5rem auto 0;
   display: block;
 }
-
-.bg-bigbluecircle {
+.services .bg-bigbluecircle {
   position: relative;
   z-index: 0;
   padding: 0 0.932rem 2.225rem 0.9rem;
 }
-.bg-bigbluecircle .bigbluecircle {
+.services .bg-bigbluecircle .bigbluecircle {
   position: absolute;
   width: 10rem;
   height: 10rem;
