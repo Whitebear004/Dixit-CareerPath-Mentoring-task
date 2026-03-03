@@ -56,6 +56,32 @@ body:has(.theme-toggle:checked) {
 body:has(.theme-toggle:checked) button {
   background-color: #444444;
 }
+body:has(.theme-toggle:checked) .content {
+  color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) .button-container :first-child {
+  background-color: #ffffff;
+  color: #000000;
+}
+body:has(.theme-toggle:checked) .button-container :last-child {
+  background-color: #1E2A39;
+  color: #f5f5f5;
+}
+body:has(.theme-toggle:checked) .button-container :last-child .darkmode-icons {
+  width: 2rem;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.theme-toggle:checked ~ .lightmode-icons {
+  display: none;
+}
+
+.darkmode-icons {
+  display: none;
+}
 
 .theme-toggle {
   display: none;
@@ -198,10 +224,39 @@ body:has(.theme-toggle:checked) body {
 }
 .img-container :first-child {
   z-index: -1;
+  width: 25rem;
 }
 .img-container :last-child {
   position: absolute;
   z-index: 1;
+  right: 5rem;
+  top: 40rem;
+}
+
+.herosection2 span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  position: relative;
+  bottom: 20rem;
+  z-index: 2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  left: 3rem;
+}
+.herosection2 span h3 {
+  font-size: 0.5rem;
+  color: #000000;
+}
+.herosection2 span p {
+  font-size: 0.4rem;
+  color: #000000;
 }
 
 html {
