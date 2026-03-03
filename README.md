@@ -1,1 +1,0 @@
-# Dixit-CareerPath-Mentoring-task
